@@ -1,0 +1,2 @@
+Qr code scanner : https://github.com/schmich/instascan
+QR code generate : https://www.simplesoftware.io/docs/simple-qrcode
