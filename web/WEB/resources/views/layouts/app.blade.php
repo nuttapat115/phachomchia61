@@ -21,12 +21,15 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     {{--  script  --}}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
     <script src="{{ asset('js/camera/instascan.min.js') }}"></script>
 
+    {{--fontawesome5--}}
+    <script src="{{ asset('js/fontawesome5.js') }}"></script>
     {{--manual--}}
     <style>
         html ,body {
-            background: url('{{ asset('img/DSC_0101_33.jpg') }}') no-repeat center center fixed;
+            background: url('{{ asset('img/DSC_0101_33-01.svg') }}') no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;

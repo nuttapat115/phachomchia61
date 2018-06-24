@@ -21,25 +21,26 @@
     <div class="row justify-content-center">
         <img src="{{ asset('img/logo.png') }}" alt="" width="600px" height="400px" class="responsive">
     </div>
-    <div class="row justify-content-center">
-        <div class="col-sm">
-            <form method="POST" action="{{ route('login') }}">
-                @csrf
-                <div class="form-group row">
-                    <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+    <div style="    text-align: center;
+    font-size: 30px;
+    margin: 20px 0px;
+    font-weight: bold;">ตรวจสอบที่นั่งด้วยรหัสนักศึกษา 11 หลัก</div>
+    <div class="row justify-content-center justify-content-md-center">
+        <div class="col-md-auto">
+                <form method="POST" action="{{ route('login') }}" class="form-inline">
+                    @csrf
+                    <div class="form-group">
+                        <input id="id" type="text" class="form-control{{ $errors->has('id') ? ' is-invalid' : '' }}" name="id" value="{{ old('id') }}" placeholder="61xxxxxxxxx" required autofocus style="width: 400px;border-radius: 20px;text-align: center">
 
-                    <div class="col-md-6">
-                        <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-
-                        @if ($errors->has('email'))
+                        @if ($errors->has('id'))
                             <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
+                                    <strong>{{ $errors->first('id') }}</strong>
+                            </span>
                         @endif
                     </div>
-                </div>
-            </form>
-        </div>
+                    <input type="hidden" id="password" name="password" value="password">
+                    <button type="submit" class="btn btn-warning" style="margin-left: 15px;border-radius: 20px"><i class="fas fa-search"></i> Search</button>
+                </form>
         </div>
     </div>
 </div>
