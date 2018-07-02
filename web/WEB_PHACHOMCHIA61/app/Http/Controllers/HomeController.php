@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class HomeController extends Controller
 {
@@ -23,6 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+//        $useer = DB::raw(DB::select(''));
         return view('home');
     }
 }

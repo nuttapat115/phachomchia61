@@ -56,6 +56,51 @@
         .loginpage{
             display: none;
         }
+        @elseif (Request::path() == 'home')
+         html,body {
+            width:100%;
+            height:100%;
+            background: url({{ asset('img/bg.jpg')}}) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        .cover {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+        }
+        .blur-in{
+            -webkit-filter: blur(0px);
+            -moz-filter: blur(0px);
+            -o-filter: blur(0px);
+            -ms-filter: blur(0px);
+            filter: blur(0px);
+            margin: 0px;
+        }
+        #background{
+            width: 100%;
+            height: 100%;
+        }
+        .logoInLogin{
+            width: 500px;
+        }
+        .loginpage{
+            display: none;
+        }
+        .vertical-center {
+            min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+            min-height: 100vh; /* These two lines are counted as one :-)       */
+
+            display: flex;
+            align-items: center;
+        }
+        .qrlogo{
+            width: 190px;
+        }
+
         @endif
     </style>
 </head>
