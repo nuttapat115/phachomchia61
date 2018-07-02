@@ -98,9 +98,15 @@
             align-items: center;
         }
         .qrlogo{
-            width: 190px;
+            width: 350px;
         }
-
+        @elseif(Request::path() == 'stage')
+        html,body{
+            background-color: #c77d7d;
+        }
+        .loginpage{
+            display: none;
+        }
         @endif
     </style>
 </head>

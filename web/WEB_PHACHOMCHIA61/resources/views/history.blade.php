@@ -47,7 +47,7 @@
                                         <nav style="margin: 10px 0px">
                                             <div class="row">
                                                 <div class="col-md">
-                                                    <button type = "button" class = "btn btn-default" style="width: 100%;border-radius: 20px" onclick="window.location.href = '{{ route('stage') }}'">Check Sit</button>
+                                                    <button type = "button" class = "btn btn-default" style="width: 100%;border-radius: 20px">Check Sit</button>
                                                 </div>
                                                 <div class="col-md">
                                                     <button type = "button" class = "btn btn-default" style="width: 100%;border-radius: 20px">History</button>
