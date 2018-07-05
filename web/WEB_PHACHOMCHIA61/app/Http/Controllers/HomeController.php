@@ -44,6 +44,10 @@ class HomeController extends Controller
     public function stage()
     {
         $id = Auth::user()->studentID;
-        return view('stage');
+        $sit = DB::select(DB::raw("SELECT distinct sit FROM yim where studentID = '$id' "));
+        foreach ($sit as $sits){
+            $userSIT = $sits->sit;
+        }
+        return view('stage')->with('sit',$userSIT);
     }
 }

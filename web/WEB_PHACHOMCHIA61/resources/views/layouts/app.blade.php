@@ -12,6 +12,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -107,6 +108,16 @@
         .loginpage{
             display: none;
         }
+        .table thead th{
+            border-bottom: 0px;
+            width: 30px;
+        }
+        .table td, .table th{
+            border-top: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+
         @endif
     </style>
 </head>
