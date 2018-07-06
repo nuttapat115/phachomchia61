@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="cover blur-in" style="z-index: 1;background-color: rgba(255, 255, 255,0.9);top: 0px;"></div>
+<div class="cover blur-in box blurred-bg tinted" style="z-index: 1;background-color: rgba(255, 255, 255,0.9);top: 0px;"></div>
 <div class="container" style="z-index: 90;position: relative;">
     <div class="row justify-content-center">
         <div>

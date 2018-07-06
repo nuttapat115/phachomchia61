@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="cover blur-in" style="z-index: 1;background-color: rgba(255, 255, 255,0.9);top: 0px;"></div>
+    <div class="cover blur-in box blurred-bg tinted" style="z-index: 1;background-color: rgba(255, 255, 255,0.9);top: 0px;"></div>
 
     <div class="jumbotron vertical-center" style="z-index: 90;margin: -24px 0px;position: relative;background-color: transparent">
         <div class="container" style="z-index: 90;position: relative;">
             <div class="xx" style="text-align: right">
-                <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout <span class="glyphicon glyphicon-log-out"></span></a>
+                <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" style="padding: 10px 40px;background-color: white;border-radius: 15px;margin-right: 1.25rem;">Logout <span class="glyphicon glyphicon-log-out"></span></a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
@@ -15,7 +15,7 @@
 
                 <div class="col-md">
                     <div class="card-body" style="text-align: center">
-                        <div class="content_center" style="background-color: white;border-radius: 30px;padding: 20px">
+                        <div class="content_center" style="background-color: white;border-radius: 15px;padding: 20px">
                             <div class="row">
                                 <div class="col-md">
                                     <nav id="fullsized_image_holder">
@@ -63,25 +63,4 @@
             </div>
         </div>
     </div>
-
-    <script type="text/javascript">
-        function saveImage() {
-            var ua = window.navigator.userAgent;
-
-            if (ua.indexOf("Chrome") > 0) {
-                // save image without file type
-                var canvas = document.getElementById("canvas");
-                document.location.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-
-                // save image as png
-                var link = document.createElement('a');
-                link.download = "test.png";
-                link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");;
-                link.click();
-            }
-            else {
-                alert("Please use Chrome");
-            }
-        }
-    </script>
 @endsection

@@ -18,7 +18,7 @@ var app = new Vue({
         self.activeCameraId = cameras[0].id;
         self.scanner.start(cameras[0]);
       } else {
-        console.error('No cameras found.');
+        console.error('ไม่พบรายชื่อกล้อง.');
       }
     }).catch(function (e) {
       console.error(e);
@@ -26,7 +26,7 @@ var app = new Vue({
   },
   methods: {
     formatName: function (name) {
-      return name || '(unknown)';
+      return name || '(ไม่พบรายชื่อกล้อง)';
     },
     selectCamera: function (camera) {
       this.activeCameraId = camera.id;
