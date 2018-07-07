@@ -6,22 +6,25 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
     //
     use AuthenticatesUsers;
+    /**
+     * Where to redirect users after login.
+     *
+     * @var string
+     */
     protected $redirectTo = '/dashboard';
     protected $guard = 'admin';
 
     public function showLoginForm()
     {
-        if (view()->exists('auth.authenticate')) {
-            return view('auth.authenticate');
-        }
-
         return view('adminauth.login');
     }
+
     public function showRegistrationForm()
     {
         return view('adminauth.register');
@@ -31,6 +34,7 @@ class AuthController extends Controller
     {
         return 'studentID';
     }
+
     /**
      * Get the guard to be used during authentication.
      *
@@ -38,8 +42,10 @@ class AuthController extends Controller
      */
     protected function guard()
     {
+
         return Auth::guard('admin');
     }
+
     /**
      * Create a new controller instance.
      *
@@ -47,7 +53,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        $this->middleware('guest:admin', ['except' => ['logout']]);
     }
 
     /**
@@ -60,27 +66,28 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
-        $this->validateLogin($request);
+        // Validate the form data
+        $this->validate($request, [
+            'studentID'   => 'required',
+            'password' => 'required|min:6'
+        ]);
 
-        // If the class is using the ThrottlesLogins trait, we can automatically throttle
-        // the login attempts for this application. We'll key this by the username and
-        // the IP address of the client making these requests into this application.
-        if ($this->hasTooManyLoginAttempts($request)) {
-            $this->fireLockoutEvent($request);
-
-            return $this->sendLockoutResponse($request);
+        // Attempt to log the user in
+        if (Auth::guard('admin')->attempt(['studentID' => $request->studentID, 'password' => $request->password], $request->remember)) {
+            // if successful, then redirect to their intended location
+            Session::put('authen_type', 'admin');
+            return redirect()->intended(route('dashboard'));
         }
-
-        if ($this->attemptLogin($request)) {
-            return $this->sendLoginResponse($request);
-        }
-
-        // If the login attempt was unsuccessful we will increment the number of attempts
-        // to login and redirect the user back to the login form. Of course, when this
-        // user surpasses their maximum number of attempts they will get locked out.
-        $this->incrementLoginAttempts($request);
-
-        return $this->sendFailedLoginResponse($request);
+            // if unsuccessful, then redirect back to the login with the form data
+        return redirect()->back()->withInput($request->only('studentID', 'remember'));
     }
+
+    public function logout()
+    {
+        Auth::guard('admin')->logout();
+        Session::forget('authen_type');
+        return redirect('/admin');
+    }
+
 
 }

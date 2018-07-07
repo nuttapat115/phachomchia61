@@ -33,11 +33,13 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('admin/register', 'AdminAuth\AuthController@showRegistrationForm');
     Route::post('admin/register', 'AdminAuth\AuthController@register');
 
-    Route::get('/dashboard','AdminController@dashboard');
-
 });
 
-Route::get('/admin', function (){
-    return redirect()->route('adminLogin');
+Route::get('/dashboard','AdminController@dashboard')->name('dashboard');
+
+Route::group(['middleware' => 'usersession'], function () {
+    Route::get('/admin', function (){
+        return redirect()->route('dashboard');
+    });
 });
 

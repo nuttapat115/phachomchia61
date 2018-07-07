@@ -8,20 +8,17 @@ class AdminController extends Controller
 {
     //
     /**
-     * Where to redirect users after login.
+     * Create a new controller instance.
      *
-     * @var string
+     * @return void
      */
-
-    public function __construct(){
-        $this->middleware('admin');
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
     }
 
     public function dashboard(){
         return view('adminauth.dashboard.home');
     }
-    public function scan()
-    {
-        return view('scan');
-    }
+
 }

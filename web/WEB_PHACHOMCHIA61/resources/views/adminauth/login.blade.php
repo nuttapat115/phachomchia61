@@ -22,7 +22,8 @@
 
                                         <div>
                                             <div class="col" style="text-align: center;margin: 0px auto">
-                                                <input id="studentID" type="text" class="form-control{{ $errors->has('studentID') ? ' is-invalid' : '' }}" name="studentID" value="{{ old('studentID') }}" placeholder="59XXXXXXXX" required autofocus style="border-radius: 50px;text-align: center">
+                                                {{--<input id="studentID" type="text" class="form-control{{ $errors->has('studentID') ? ' is-invalid' : '' }}" name="studentID" value="{{ old('studentID') }}" placeholder="59XXXXXXXX" required autofocus style="border-radius: 50px;text-align: center">--}}
+                                                <input id="studentID" type="text" class="form-control{{ $errors->has('studentID') ? ' is-invalid' : '' }}" name="studentID" value="59070501036" required autofocus style="border-radius: 50px;text-align: center">
 
                                                 @if ($errors->has('studentID'))
                                                     <span class="invalid-feedback" role="alert">
