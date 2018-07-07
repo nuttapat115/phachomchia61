@@ -20,24 +20,43 @@
         <video id="preview"></video>
         <div class="container-fluid">
           <div class="row">
-            <div class="col-5 mx-auto" style="display: flex;margin: 30px 0px">
+            <div class="col-5 mx-auto" style="display: flex;margin: 30px 0px;">
               <input id="studentID" type="text" class="form-control" name="studentID" placeholder="61XXXXXXXX" required autofocus style="border-radius: 50px;text-align: center">
               <button type="button" class="btn btn-primary" style="border-radius: 30px;margin-left: 10px">SUBMIT</button>
             </div>
           </div>
           <div class="row">
-            <div class="col-7 mx-auto" style="display: flex">
-              <div class="col">asdasdasdasda</div>
-              <div class="col">asdasd</div>
+            <div class="col-5 mx-auto" style="display: flex;background-color: white;padding: 12px 0px;border-radius: 15px;box-shadow: 2px 3px #dbdbdb;">
+              <div class="col-4" style="border-right: 1px solid black;padding-right: 10px;text-align: right;color: #28a745;font-weight: bold">คณะ</div>
+              <div class="col-8" style="color: #28a745;font-weight: bold">ชื่อ - นามสกุล </div>
             </div>
           </div>
         </div>
       </div>
 
       <div class="sidebar">
+        <div class="content" style="width: 100%;display: flex">
+          <section class="nameScan" style="width: 50%">
+            <h2 style="border-right: 1px solid black;">NAME</h2>
+            <ul>
+              <li class="empty" style="border-right: 1px solid black;">-</li>
+            </ul>
+          </section>
+          <section class="scans" style="width: 50%">
+            <h2>ID</h2>
+            <ul v-if="scans.length === 0">
+              <li class="empty">-</li>
+            </ul>
+            <transition-group name="scans" tag="ul">
+              <li v-for="scan in scans" :key="scan.date" :title="scan.content" style="text-align: center">{{ scan.content }}</li>
+            </transition-group>
+          </section>
+        </div>
+      </div>
+
+      <div class="cameraShow">
         <section class="cameras">
-          <h2>Cameras</h2>
-          <ul>
+          <ul style="list-style-type: none;margin-bottom: 0px">
             <li v-if="cameras.length === 0" class="empty">No cameras found</li>
             <li v-for="camera in cameras">
               <span v-if="camera.id == activeCameraId" :title="formatName(camera.name)" class="active">{{ formatName(camera.name) }}</span>
@@ -47,18 +66,7 @@
             </li>
           </ul>
         </section>
-        <section class="scans">
-          <h2>Scans</h2>
-          <ul v-if="scans.length === 0">
-            <li class="empty">ยังไม่มีรายการแสกน</li>
-          </ul>
-          <transition-group name="scans" tag="ul">
-            <li v-for="scan in scans" :key="scan.date" :title="scan.content">{{ scan.content }}</li>
-          </transition-group>
-        </section>
       </div>
-
-
 
     </div>
 

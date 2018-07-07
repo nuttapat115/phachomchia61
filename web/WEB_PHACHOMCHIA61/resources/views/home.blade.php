@@ -20,12 +20,13 @@
                                 <div class="col-md">
                                     <nav id="fullsized_image_holder">
                                         {{--<img src="{{ asset('img/qttestlogo.jpg') }}" alt="" class="qrlogo">--}}
-                                        <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->merge('https://raw.githubusercontent.com/nuttapat115/phachomchia61/master/web/WEB_PHACHOMCHIA61/public/img/qttestlogo2.jpg', .125, true)->size(300)->generate(Auth::user()->studentID )) !!} " class="qrlogo">
+                                        {{--<img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->merge('https://raw.githubusercontent.com/nuttapat115/phachomchia61/master/web/WEB_PHACHOMCHIA61/public/img/qttestlogo2.jpg', .125, true)->size(300)->generate(Auth::user()->studentID )) !!} " class="qrlogo">--}}
+                                        {!! QrCode::errorCorrection('H')->size(300)->generate(Auth::user()->studentID); !!}
                                     </nav>
                                     <nav style="margin: 0px 40px;border-radius: 20px;">
                                         <div class="row">
                                             <div class="col-md">
-                                                <a class = "btn btn-success" style="width: 200px;border-radius: 20px" href="data:image/png;base64, {!! base64_encode(QrCode::format('png')->merge('https://raw.githubusercontent.com/nuttapat115/phachomchia61/master/web/WEB_PHACHOMCHIA61/public/img/qttestlogo2.jpg', .125, true)->size(500)->generate(Auth::user()->studentID )) !!} " download>Save qr</a>
+                                                <a class = "btn btn-success" style="width: 200px;border-radius: 20px" href="data:image/png;base64, {!! base64_encode(QrCode::format('png')->merge('https://raw.githubusercontent.com/nuttapat115/phachomchia61/master/web/WEB_PHACHOMCHIA61/public/img/qttestlogo2.jpg', .0, true)->errorCorrection('H')->size(500)->generate(Auth::user()->studentID )) !!} " download>Save qr</a>
                                             </div>
                                         </div>
                                     </nav>

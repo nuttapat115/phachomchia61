@@ -14,7 +14,7 @@ body, html {
 }
 .sidebar {
   background: #eceff1;
-  min-width: 250px;
+  min-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -23,7 +23,7 @@ body, html {
 .sidebar h2 {
   font-weight: normal;
   font-size: 1.0rem;
-  background: #607d8b;
+  background: #6c757d;
   color: #fff;
   padding: 10px;
   margin: 0;
@@ -41,11 +41,11 @@ body, html {
   text-overflow: ellipsis;
 }
 .cameras ul {
-  padding: 15px 20px;
+  padding: 5px 20px;
 }
 .cameras .active {
   font-weight: bold;
-  color: #009900;
+  color: #f8f9fa;
 }
 .cameras a {
   color: #555;
@@ -55,7 +55,7 @@ body, html {
 .cameras a:hover {
   text-decoration: underline;
 }
-.scans li {
+.scans li , .nameScan li{
   padding: 10px 20px;
   border-bottom: 1px solid #ccc;
 }
@@ -75,4 +75,14 @@ body, html {
   display: flex;
   width: 100%;
   overflow: hidden;
+  background-color: #f8f9fa;
+}
+.cameraShow{
+  position: absolute;
+  background-color: #20c997;
+  bottom: 0px;
+  padding: 0px 70px;
+  border-radius: 10px;
+  margin: 10px 10px;
+  color: white;
 }
