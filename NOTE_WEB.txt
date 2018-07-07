@@ -1,2 +1,3 @@
 Qr code scanner : https://github.com/schmich/instascan
 QR code generate : https://www.simplesoftware.io/docs/simple-qrcode
+Allow-Control-Allow-Origin: * : https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi/related?utm_source=chrome-app-launcher-info-dialog
