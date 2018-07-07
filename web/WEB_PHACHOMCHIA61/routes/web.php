@@ -22,3 +22,22 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/stage', 'HomeController@stage')->name('stage');
 Route::get('/history', 'HomeController@history')->name('history');
 Route::get('/scan', 'AdminController@scan')->name('scan');
+
+Route::group(['middleware' => ['web']], function () {
+    //Login Routes...
+    Route::get('/admin/login','AdminAuth\AuthController@showLoginForm')->name('adminLogin');
+    Route::post('/admin/login','AdminAuth\AuthController@login')->name('adminlogincheck');
+    Route::get('/admin/logout','AdminAuth\AuthController@logout');
+
+    // Registration Routes...
+    Route::get('admin/register', 'AdminAuth\AuthController@showRegistrationForm');
+    Route::post('admin/register', 'AdminAuth\AuthController@register');
+
+    Route::get('/dashboard','AdminController@dashboard');
+
+});
+
+Route::get('/admin', function (){
+    return redirect()->route('adminLogin');
+});
+

@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
 --
 -- Host: localhost    Database: phachomchia61
 -- ------------------------------------------------------
@@ -14,6 +14,36 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `admins`
+--
+
+DROP TABLE IF EXISTS `admins`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `admins` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `studentID` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `department` text COLLATE utf8_unicode_ci NOT NULL,
+  `remember_token` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `admins`
+--
+
+LOCK TABLES `admins` WRITE;
+/*!40000 ALTER TABLE `admins` DISABLE KEYS */;
+INSERT INTO `admins` VALUES (1,'meenkx','59070501036','$2y$10$VTtSrJ54gxpMXobiYNpKj.YFs6wIBONGYf3bTFwQ5rK3h4ljtCbi6','CPE',NULL,NULL,NULL);
+/*!40000 ALTER TABLE `admins` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `history`
@@ -69,7 +99,7 @@ CREATE TABLE `profile` (
 
 LOCK TABLES `profile` WRITE;
 /*!40000 ALTER TABLE `profile` DISABLE KEYS */;
-INSERT INTO `profile` VALUES (1,'61050501001','nuttapat chakpech','$2y$10$VTtSrJ54gxpMXobiYNpKj.YFs6wIBONGYf3bTFwQ5rK3h4ljtCbi6','CPE','https://www.facebook.com/',0,'eLn7CvnGI9cAKDrtwSFydbaVQuYsanVOaIwfPbh56rJ8xtCIovTXUw0peqtK',NULL,NULL),(2,'61050501002','meenkx','$2y$10$VTtSrJ54gxpMXobiYNpKj.YFs6wIBONGYf3bTFwQ5rK3h4ljtCbi6','EE','https://www.facebook.com/',0,'1oDNoJk09A9mPMw8TuWTyxsdFjCB566ytiPOgJx8xoZseeaUAbbwp9ijJFWU',NULL,NULL);
+INSERT INTO `profile` VALUES (1,'61050501001','nuttapat chakpech','$2y$10$VTtSrJ54gxpMXobiYNpKj.YFs6wIBONGYf3bTFwQ5rK3h4ljtCbi6','CPE','https://www.facebook.com/',0,'eLn7CvnGI9cAKDrtwSFydbaVQuYsanVOaIwfPbh56rJ8xtCIovTXUw0peqtK',NULL,NULL),(2,'61050501002','meenkx','$2y$10$VTtSrJ54gxpMXobiYNpKj.YFs6wIBONGYf3bTFwQ5rK3h4ljtCbi6','EE','https://www.facebook.com/',0,'gx0KPR2HbGqogBC0NiPr3U4pBuBAxYSDabsOe7gquXgU1Bn3uIDFGF2rG4qS',NULL,NULL);
 /*!40000 ALTER TABLE `profile` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -107,4 +137,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-06 17:06:45
+-- Dump completed on 2018-07-07 15:21:21

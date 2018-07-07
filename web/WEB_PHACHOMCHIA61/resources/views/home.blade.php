@@ -20,8 +20,8 @@
                                 <div class="col-md">
                                     <nav id="fullsized_image_holder">
                                         {{--<img src="{{ asset('img/qttestlogo.jpg') }}" alt="" class="qrlogo">--}}
-                                        {{--<img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->merge('https://raw.githubusercontent.com/nuttapat115/phachomchia61/master/web/WEB_PHACHOMCHIA61/public/img/qttestlogo2.jpg', .125, true)->size(300)->generate(Auth::user()->studentID )) !!} " class="qrlogo">--}}
-                                        {!! QrCode::errorCorrection('H')->size(300)->generate(Auth::user()->studentID); !!}
+                                        <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->merge('https://raw.githubusercontent.com/nuttapat115/phachomchia61/master/web/WEB_PHACHOMCHIA61/public/img/qttestlogo2.jpg', .0, true)->errorCorrection('H')->size(300)->generate(Auth::user()->studentID )) !!} " class="qrlogo">
+                                        {{--  {!! QrCode::errorCorrection('H')->size(300)->generate(Auth::user()->studentID); !!}  --}}
                                     </nav>
                                     <nav style="margin: 0px 40px;border-radius: 20px;">
                                         <div class="row">
