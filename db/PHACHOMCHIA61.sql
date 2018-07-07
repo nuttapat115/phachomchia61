@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: phachomchia61
 -- ------------------------------------------------------
@@ -24,11 +24,11 @@ DROP TABLE IF EXISTS `admins`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `admins` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `studentID` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `department` text COLLATE utf8_unicode_ci NOT NULL,
-  `remember_token` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name` varchar(191) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `studentID` varchar(11) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(191) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `department` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `remember_token` varchar(191) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -99,7 +99,7 @@ CREATE TABLE `profile` (
 
 LOCK TABLES `profile` WRITE;
 /*!40000 ALTER TABLE `profile` DISABLE KEYS */;
-INSERT INTO `profile` VALUES (1,'61050501001','nuttapat chakpech','$2y$10$VTtSrJ54gxpMXobiYNpKj.YFs6wIBONGYf3bTFwQ5rK3h4ljtCbi6','CPE','https://www.facebook.com/',0,'eLn7CvnGI9cAKDrtwSFydbaVQuYsanVOaIwfPbh56rJ8xtCIovTXUw0peqtK',NULL,NULL),(2,'61050501002','meenkx','$2y$10$VTtSrJ54gxpMXobiYNpKj.YFs6wIBONGYf3bTFwQ5rK3h4ljtCbi6','EE','https://www.facebook.com/',0,'gx0KPR2HbGqogBC0NiPr3U4pBuBAxYSDabsOe7gquXgU1Bn3uIDFGF2rG4qS',NULL,NULL);
+INSERT INTO `profile` VALUES (1,'61050501001','nuttapat chakpech','$2y$10$VTtSrJ54gxpMXobiYNpKj.YFs6wIBONGYf3bTFwQ5rK3h4ljtCbi6','CPE','https://www.facebook.com/',0,'eLn7CvnGI9cAKDrtwSFydbaVQuYsanVOaIwfPbh56rJ8xtCIovTXUw0peqtK',NULL,NULL),(2,'61050501002','meenkx','$2y$10$VTtSrJ54gxpMXobiYNpKj.YFs6wIBONGYf3bTFwQ5rK3h4ljtCbi6','EE','https://www.facebook.com/',0,'kMgxC74HNnFtVa7ZqtOHquC1zf1iPKwwyK0GLPdnT42LYqyxcT0pqDCEugQ2',NULL,NULL);
 /*!40000 ALTER TABLE `profile` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -137,4 +137,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-07 15:21:21
+-- Dump completed on 2018-07-07 21:16:56
