@@ -18,3 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/ProfileDetail','ProfileDetailScan@name')->name('ProfileName');
+Route::post('/ProfileDetailDepartment','ProfileDetailScan@department')->name('department');
+Route::post('/insertDATA','ProfileDetailScan@insertDATA')->name('insertDATA');

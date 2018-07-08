@@ -1,4 +1,6 @@
--- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+CREATE DATABASE  IF NOT EXISTS `phachomchia61` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
+USE `phachomchia61`;
+-- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
 --
 -- Host: localhost    Database: phachomchia61
 -- ------------------------------------------------------
@@ -58,7 +60,7 @@ CREATE TABLE `history` (
   `status` text NOT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +69,6 @@ CREATE TABLE `history` (
 
 LOCK TABLES `history` WRITE;
 /*!40000 ALTER TABLE `history` DISABLE KEYS */;
-INSERT INTO `history` VALUES ('2018-06-01 00:00:00','61070501001','y',1),('2018-06-01 00:00:00','61070501002','y',2),('2018-06-01 00:00:00','61070501003','y',3),('2018-06-01 00:00:00','61070501004','y',4),('2018-06-01 00:00:00','61070501005','y',5),('2018-06-01 00:00:00','61070501006','y',6),('2018-06-01 00:00:00','61070501007','y',7),('2018-06-01 00:00:00','61070501008','y',8),('0000-00-00 00:00:00','61070501009','n',9),('2018-06-01 00:00:00','61070501010','y',10);
 /*!40000 ALTER TABLE `history` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -99,7 +100,7 @@ CREATE TABLE `profile` (
 
 LOCK TABLES `profile` WRITE;
 /*!40000 ALTER TABLE `profile` DISABLE KEYS */;
-INSERT INTO `profile` VALUES (1,'61050501001','nuttapat chakpech','$2y$10$VTtSrJ54gxpMXobiYNpKj.YFs6wIBONGYf3bTFwQ5rK3h4ljtCbi6','CPE','https://www.facebook.com/',0,'eLn7CvnGI9cAKDrtwSFydbaVQuYsanVOaIwfPbh56rJ8xtCIovTXUw0peqtK',NULL,NULL),(2,'61050501002','meenkx','$2y$10$VTtSrJ54gxpMXobiYNpKj.YFs6wIBONGYf3bTFwQ5rK3h4ljtCbi6','EE','https://www.facebook.com/',0,'kMgxC74HNnFtVa7ZqtOHquC1zf1iPKwwyK0GLPdnT42LYqyxcT0pqDCEugQ2',NULL,NULL);
+INSERT INTO `profile` VALUES (1,'61050501001','nuttapat chakpech','$2y$10$VTtSrJ54gxpMXobiYNpKj.YFs6wIBONGYf3bTFwQ5rK3h4ljtCbi6','CPE','https://www.facebook.com/',0,'eLn7CvnGI9cAKDrtwSFydbaVQuYsanVOaIwfPbh56rJ8xtCIovTXUw0peqtK',NULL,NULL),(2,'61050501002','meenkx','$2y$10$VTtSrJ54gxpMXobiYNpKj.YFs6wIBONGYf3bTFwQ5rK3h4ljtCbi6','CPE jaa','https://www.facebook.com/',0,'j4QOzSisvHEXnErFwDYu8wv7cQ6rjlPGnF6qMP3CYv5gJ2OwsBLXfAqexHOo',NULL,NULL);
 /*!40000 ALTER TABLE `profile` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -137,4 +138,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-07 21:16:56
+-- Dump completed on 2018-07-08 14:20:09
