@@ -17,6 +17,20 @@ var app = new Vue({
     self.scanner.addListener('scan', function (content, image) {
       self.scans.unshift({ date: +(Date.now()), content: content });
       id = content;
+
+      self.sdIDOut = content;
+        //data form scan output to department
+        axios.post('http://127.0.0.1:8000/api/ProfileDetailDepartment', {
+            studentID: content,
+        })
+            .then(function (response) {
+                document.getElementById('department').innerHTML = response.data;
+                console.log("console depart - " + response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
       // get name
       axios({
         method:'post',

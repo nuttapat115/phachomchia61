@@ -21,7 +21,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    {{--config css--}}
+    {{--config desktop css--}}
     <style>
         @if (Request::path() == 'login')
         {{--html,body {--}}
@@ -112,8 +112,79 @@
         .chair{
             background-color: white;padding: 10px !important;border-right:4px solid #c77d7d
         }
-        @elseif(Request::path() == 'scan')
+        @elseif(Request::path() == 'history')
         .loginpage{
+            display: none;
+        }
+        @elseif(Request::path() == 'dashboard')
+
+        /*  bhoechie tab */
+        div.bhoechie-tab-container{
+            z-index: 10;
+            background-color: #ffffff;
+            padding: 0 !important;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            border:1px solid #ddd;
+            margin-top: 20px;
+            /*margin-left: 50px;*/
+            -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+            box-shadow: 0 6px 12px rgba(0,0,0,.175);
+            -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+            background-clip: padding-box;
+            opacity: 0.97;
+            filter: alpha(opacity=97);
+        }
+        div.bhoechie-tab-menu{
+            padding-right: 0;
+            padding-left: 0;
+            padding-bottom: 0;
+        }
+        div.bhoechie-tab-menu div.list-group{
+            margin-bottom: 0;
+        }
+        div.bhoechie-tab-menu div.list-group>a{
+            margin-bottom: 0;
+        }
+        div.bhoechie-tab-menu div.list-group>a .glyphicon,
+        div.bhoechie-tab-menu div.list-group>a .fa {
+            color: #5A55A3;
+        }
+        div.bhoechie-tab-menu div.list-group>a:first-child{
+            border-top-right-radius: 0;
+            -moz-border-top-right-radius: 0;
+        }
+        div.bhoechie-tab-menu div.list-group>a:last-child{
+            border-bottom-right-radius: 0;
+            -moz-border-bottom-right-radius: 0;
+        }
+        div.bhoechie-tab-menu div.list-group>a.active,
+        div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+        div.bhoechie-tab-menu div.list-group>a.active .fa{
+            background-color: #5A55A3;
+            background-image: #5A55A3;
+            color: #ffffff;
+        }
+        div.bhoechie-tab-menu div.list-group>a.active:after{
+            content: '';
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            margin-top: -13px;
+            border-left: 0;
+            border-bottom: 13px solid transparent;
+            border-top: 13px solid transparent;
+            border-left: 10px solid #5A55A3;
+        }
+
+        div.bhoechie-tab-content{
+            background-color: #ffffff;
+            /* border: 1px solid #eeeeee; */
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+
+        div.bhoechie-tab div.bhoechie-tab-content:not(.active){
             display: none;
         }
         @endif
@@ -187,13 +258,146 @@
             text-decoration: none;
         }
     </style>
+    {{--config mobile css--}}
+    <style>
+        /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
+        /* Portrait and Landscape */
+        @media only screen
+        and (min-device-width: 414px)
+        and (max-device-width: 736px)
+        and (-webkit-min-device-pixel-ratio: 3) {
+            @if (Request::path() == 'login')
+                .container{
+                    top: 25%;
+                    position: fixed !important;
+                }
+                .logoInLogin{
+                    width: 330px;
+                }
+                .loginpage{
+                    display: none;
+                }
+            @elseif (Request::path() == 'home')
+                .qrlogo{
+                    width: 270px;
+                }
+                .xxx{
+                    margin: 35px 0px !important;
+                }
+            @elseif (Request::path() == 'stage')
+                #stage{
+                    position: absolute;
+                    width: 245%;
+                    margin-top: 90px !important;
+                }
+                .stageTOPtitle{
+                    height: 100px;
+                }
+                .mobileStage{
+                    position: absolute;
+                    width: 420px;
+                }
+                .HeaderMobileStage{
+                    position: fixed;
+                    width: 85%;
+                }
+            @endif
+
+            /*blur*/
+            .blurred-bg {
+                background-image: url({{ asset('img/bg.jpg')}});
+                background-repeat: no-repeat;
+                -moz-background-size: 100% 100%;
+                -o-background-size: 100% 100%;
+                -webkit-background-size: 100% 100%;
+                background-size: 100% 100%;
+                background-attachment: fixed;
+            }
+            .blurred-bg.tinted {
+                background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjIiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC4yIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url({{ asset('img/bg.jpg')}});
+                background-size: 100% 100%;
+                background-image: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url({{ asset('img/bg.jpg')}});
+                background-image: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url({{ asset('img/bg.jpg')}});
+                background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url({{ asset('img/bg.jpg')}});
+            }
+            .blurred-bg.shaded {
+                background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjIiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4yIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url({{ asset('img/bg.jpg')}});
+                background-size: 100% 100%;
+                background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url({{ asset('img/bg.jpg')}});
+                background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url({{ asset('img/bg.jpg')}});
+                background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url({{ asset('img/bg.jpg')}});
+            }
+
+            .box {
+                border-radius: 5px;
+                -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+                -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+                box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                padding: 20px;
+                text-align: center;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+                display: flex;
+                transition: box-shadow 0.3s ease;
+            }
+            .box:active {
+                cursor: move;
+                -moz-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+                -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+            }
+            .box .content {
+                margin: auto;
+            }
+            .cover {
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                z-index: 1;
+            }
+            .blur-in{
+                -webkit-filter: blur(7px);
+                -moz-filter: blur(7px);
+                -o-filter: blur(7px);
+                -ms-filter: blur(7px);
+                filter: blur(7px);
+                margin: 0px;
+            }
+
+            /*link*/
+            a:link , a:visited , a:hover , a:active {
+                text-decoration: none;
+            }
+        }
+
+        /* Portrait */
+        @media only screen
+        and (min-device-width: 414px)
+        and (max-device-width: 736px)
+        and (-webkit-min-device-pixel-ratio: 3)
+        and (orientation: portrait) {
+
+        }
+
+        /* Landscape */
+        @media only screen
+        and (min-device-width: 414px)
+        and (max-device-width: 736px)
+        and (-webkit-min-device-pixel-ratio: 3)
+        and (orientation: landscape) {
+
+        }
+    </style>
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel loginpage">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/') }}" style="padding: 10px 40px;background-color: #6c757d;border-radius: 15px;font-weight: bold;color: white;">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -258,6 +462,21 @@
                 delay: {show: 300, hide: 100}
             });
         });
+    </script>
+    {{--dataTable--}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/select/1.2.7/css/select.bootstrap4.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable( {
+                select: true
+            } );
+        } );
     </script>
 </body>
 </html>

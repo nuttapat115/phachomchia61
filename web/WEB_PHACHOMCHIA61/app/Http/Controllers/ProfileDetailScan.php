@@ -46,13 +46,14 @@ class ProfileDetailScan extends Controller
 
     public function insertDATA(Request $request){
         $studentID = $request->input('studentID');
-//        $today = $request->input('date');
-        $today = date('Y-m-d H:i:s');
+        $date = date('Y-m-d');
+        $time = date('H:i:s');
         DB::table('history')->insert(
             [
-                'date' => $today,
+                'date' => $date,
+                'time' => $time,
                 'studentID' => $studentID,
-                'status' => 'Y',
+                'status' => 'เข้าประชุม',
             ]
         );
     }

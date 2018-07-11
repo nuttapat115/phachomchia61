@@ -32,7 +32,7 @@
                                     </nav>
                                 </div>
                                 <div class="col-md" style="text-align: left;">
-                                    <div class="xx" style="margin: 105px 0px">
+                                    <div class="xxx" style="margin: 105px 0px">
                                         <nav style="margin: 5px 0px">
                                             SIT : <span style="color: red">{{ $sit }}</span>
                                         </nav>
@@ -47,11 +47,11 @@
                                         </nav>
                                         <nav style="margin: 10px 0px">
                                             <div class="row">
-                                                <div class="col-md">
-                                                    <button type = "button" class = "btn btn-default" style="width: 100%;border-radius: 20px" onclick="window.location.href = '{{ route('stage') }}'">Check Sit</button>
+                                                <div class="col-md" style="margin: 5px 0px">
+                                                    <button type = "button" class = "btn btn-secondary" style="width: 100%;border-radius: 20px" onclick="window.location.href = '{{ route('stage') }}'">Check Sit</button>
                                                 </div>
-                                                <div class="col-md">
-                                                    <button type = "button" class = "btn btn-default" style="width: 100%;border-radius: 20px">History</button>
+                                                <div class="col-md" style="margin: 5px 0px">
+                                                    <button type = "button" class = "btn btn-secondary" style="width: 100%;border-radius: 20px" onclick="window.location.href = '{{ route('history') }}'">History</button>
                                                 </div>
                                             </div>
                                         </nav>

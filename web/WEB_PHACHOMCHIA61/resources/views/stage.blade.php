@@ -2,12 +2,12 @@
 
 @section('content')
 
-        <div class="container-fluid" style="z-index: 90;position: relative;">
-            <div class="h-100 row justify-content-center">
+        <div class="container-fluid mobileStage" style="z-index: 90;position: relative;">
+            <div class="h-100 row justify-content-center HeaderMobileStage">
                     <div class="col" style="text-align: center">
                         <button type="button" class="btn btn-light" style="border-radius: 15px;font-size: 15px;width: 200px" onclick="window.location.href = '{{ route('home') }}' ">back</button>
                     </div>
-                    <div class="col-8 align-middle" style="background-color: white;text-align: center;font-size: 30px;padding: 15px 0px">
+                    <div class="col-8 align-middle stageTOPtitle" style="background-color: white;text-align: center;font-size: 30px;padding: 15px 0px;font-weight: bold">
                         STAGE
                     </div>
                     <div class="col"></div>
@@ -17,54 +17,54 @@
                     <div class="col"></div>
                     <div class="col-5">
                         <table class="table">
-                                <thead>
-                                <tr>
-                                    <th scope="col" style="background-color: black;color: white;">A</th>
-                                    <th scope="col" style="background-color: black;color: white;">B</th>
-                                    <th scope="col" style="background-color: black;color: white;">C</th>
-                                    <th scope="col" style="background-color: black;color: white;">D</th>
-                                    <th scope="col" style="background-color: black;color: white;">E</th>
-                                    <th scope="col" style="background-color: black;color: white;">F</th>
-                                    <th scope="col" style="background-color: black;color: white;">G</th>
-                                    <th scope="col" style="background-color: black;color: white;">H</th>
-                                    <th scope="col" style="background-color: black;color: white;">I</th>
-                                    <th scope="col" style="background-color: black;color: white;">J</th>
-                                    <th scope="col" style="background-color: black;color: white;">K</th>
-                                    <th scope="col" style="background-color: black;color: white;">L</th>
-                                    <th scope="col" style="background-color: black;color: white;">M</th>
-                                    <th scope="col" style="background-color: black;color: white;">N</th>
-                                    <th scope="col" style="background-color: black;color: white;">O</th>
-                                    <th scope="col" style="background-color: black;color: white;">P</th>
-                                    <th scope="col" style="background-color: black;color: white;">Q</th>
-                                </tr>
-                                </thead>
-                            </table>
+                            <thead>
+                            <tr>
+                                <th scope="col" style="background-color: black;color: white;">A</th>
+                                <th scope="col" style="background-color: black;color: white;">B</th>
+                                <th scope="col" style="background-color: black;color: white;">C</th>
+                                <th scope="col" style="background-color: black;color: white;">D</th>
+                                <th scope="col" style="background-color: black;color: white;">E</th>
+                                <th scope="col" style="background-color: black;color: white;">F</th>
+                                <th scope="col" style="background-color: black;color: white;">G</th>
+                                <th scope="col" style="background-color: black;color: white;">H</th>
+                                <th scope="col" style="background-color: black;color: white;">I</th>
+                                <th scope="col" style="background-color: black;color: white;">J</th>
+                                <th scope="col" style="background-color: black;color: white;">K</th>
+                                <th scope="col" style="background-color: black;color: white;">L</th>
+                                <th scope="col" style="background-color: black;color: white;">M</th>
+                                <th scope="col" style="background-color: black;color: white;">N</th>
+                                <th scope="col" style="background-color: black;color: white;">O</th>
+                                <th scope="col" style="background-color: black;color: white;">P</th>
+                                <th scope="col" style="background-color: black;color: white;">Q</th>
+                            </tr>
+                            </thead>
+                        </table>
                     </div>
                     <div class="col"></div>
                     <div class="col-5">
                         <table class="table">
-                                <thead>
-                                <tr>
-                                    <th scope="col" style="background-color: black;color: white;">R</th>
-                                    <th scope="col" style="background-color: black;color: white;">S</th>
-                                    <th scope="col" style="background-color: black;color: white;">T</th>
-                                    <th scope="col" style="background-color: black;color: white;">U</th>
-                                    <th scope="col" style="background-color: black;color: white;">V</th>
-                                    <th scope="col" style="background-color: black;color: white;">W</th>
-                                    <th scope="col" style="background-color: black;color: white;">X</th>
-                                    <th scope="col" style="background-color: black;color: white;">Y</th>
-                                    <th scope="col" style="background-color: black;color: white;">Z</th>
-                                    <th scope="col" style="background-color: black;color: white;">#</th>
-                                    <th scope="col" style="background-color: black;color: white;">*</th>
-                                    <th scope="col" style="background-color: black;color: white;">π</th>
-                                    <th scope="col" style="background-color: black;color: white;">%</th>
-                                    <th scope="col" style="background-color: black;color: white;">∆</th>
-                                    <th scope="col" style="background-color: black;color: white;">Ɵ</th>
-                                    <th scope="col" style="background-color: black;color: white;">λ</th>
-                                    <th scope="col" style="background-color: black;color: white;">α</th>
-                                </tr>
-                                </thead>
-                            </table>
+                            <thead>
+                            <tr>
+                                <th scope="col" style="background-color: black;color: white;">R</th>
+                                <th scope="col" style="background-color: black;color: white;">S</th>
+                                <th scope="col" style="background-color: black;color: white;">T</th>
+                                <th scope="col" style="background-color: black;color: white;">U</th>
+                                <th scope="col" style="background-color: black;color: white;">V</th>
+                                <th scope="col" style="background-color: black;color: white;">W</th>
+                                <th scope="col" style="background-color: black;color: white;">X</th>
+                                <th scope="col" style="background-color: black;color: white;">Y</th>
+                                <th scope="col" style="background-color: black;color: white;">Z</th>
+                                <th scope="col" style="background-color: black;color: white;">#</th>
+                                <th scope="col" style="background-color: black;color: white;">*</th>
+                                <th scope="col" style="background-color: black;color: white;">π</th>
+                                <th scope="col" style="background-color: black;color: white;">%</th>
+                                <th scope="col" style="background-color: black;color: white;">∆</th>
+                                <th scope="col" style="background-color: black;color: white;">Ɵ</th>
+                                <th scope="col" style="background-color: black;color: white;">λ</th>
+                                <th scope="col" style="background-color: black;color: white;">α</th>
+                            </tr>
+                            </thead>
+                        </table>
                     </div>
                     <div class="col"></div>
                 </div>
@@ -98,28 +98,28 @@
                     <div class="col"></div>
                     <div class="col-5">
                         <table class="table" style="margin-bottom: 0px">
-                                <thead>
-                                <tr>
-                                    <th class="r01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="r01"  ></th>
-                                    <th class="s01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="s01"  ></th>
-                                    <th class="t01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="t01"  ></th>
-                                    <th class="u01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="u01"  ></th>
-                                    <th class="v01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="v01"  ></th>
-                                    <th class="w01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="w01"  ></th>
-                                    <th class="x01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="x01"  ></th>
-                                    <th class="y01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="y01"  ></th>
-                                    <th class="z01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="z01"  ></th>
-                                    <th class="#01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="#01"  ></th>
-                                    <th class="*01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="*01"  ></th>
-                                    <th class="π01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="π01"  ></th>
-                                    <th class="%01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="%01"  ></th>
-                                    <th class="∆01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="∆01"  ></th>
-                                    <th class="Ɵ01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ɵ01"  ></th>
-                                    <th class="λ01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="λ01"  ></th>
-                                    <th class="α01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="α01"  ></th>
-                                </tr>
-                                </thead>
-                            </table>
+                            <thead>
+                            <tr>
+                                <th class="r01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="r01"  ></th>
+                                <th class="s01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="s01"  ></th>
+                                <th class="t01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="t01"  ></th>
+                                <th class="u01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="u01"  ></th>
+                                <th class="v01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="v01"  ></th>
+                                <th class="w01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="w01"  ></th>
+                                <th class="x01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="x01"  ></th>
+                                <th class="y01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="y01"  ></th>
+                                <th class="z01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="z01"  ></th>
+                                <th class="#01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="#01"  ></th>
+                                <th class="*01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="*01"  ></th>
+                                <th class="π01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="π01"  ></th>
+                                <th class="%01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="%01"  ></th>
+                                <th class="∆01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="∆01"  ></th>
+                                <th class="Ɵ01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ɵ01"  ></th>
+                                <th class="λ01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="λ01"  ></th>
+                                <th class="α01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="α01"  ></th>
+                            </tr>
+                            </thead>
+                        </table>
                     </div>
                     <div class="col" style="font-size: 0.9rem;text-align: center;background-color: black;color: white">1</div>
                 </div>
@@ -153,28 +153,28 @@
                     <div class="col"></div>
                     <div class="col-5">
                         <table class="table" style="margin-bottom: 0px">
-                                <thead>
-                                <tr>
-                                    <th class="r02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="r02"  ></th>
-                                    <th class="s02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="s02"  ></th>
-                                    <th class="t02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="t02"  ></th>
-                                    <th class="u02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="u02"  ></th>
-                                    <th class="v02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="v02"  ></th>
-                                    <th class="w02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="w02"  ></th>
-                                    <th class="x02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="x02"  ></th>
-                                    <th class="y02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="y02"  ></th>
-                                    <th class="z02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="z02"  ></th>
-                                    <th class="#02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="#02"  ></th>
-                                    <th class="*02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="*02"  ></th>
-                                    <th class="π02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="π02"  ></th>
-                                    <th class="%02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="%02"  ></th>
-                                    <th class="∆02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="∆02"  ></th>
-                                    <th class="Ɵ02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ɵ02"  ></th>
-                                    <th class="λ02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="λ02"  ></th>
-                                    <th class="α02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="α02"  ></th>
-                                </tr>
-                                </thead>
-                            </table>
+                            <thead>
+                            <tr>
+                                <th class="r02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="r02"  ></th>
+                                <th class="s02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="s02"  ></th>
+                                <th class="t02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="t02"  ></th>
+                                <th class="u02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="u02"  ></th>
+                                <th class="v02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="v02"  ></th>
+                                <th class="w02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="w02"  ></th>
+                                <th class="x02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="x02"  ></th>
+                                <th class="y02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="y02"  ></th>
+                                <th class="z02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="z02"  ></th>
+                                <th class="#02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="#02"  ></th>
+                                <th class="*02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="*02"  ></th>
+                                <th class="π02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="π02"  ></th>
+                                <th class="%02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="%02"  ></th>
+                                <th class="∆02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="∆02"  ></th>
+                                <th class="Ɵ02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ɵ02"  ></th>
+                                <th class="λ02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="λ02"  ></th>
+                                <th class="α02 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="α02"  ></th>
+                            </tr>
+                            </thead>
+                        </table>
                     </div>
                     <div class="col" style="font-size: 0.9rem;text-align: center;background-color: black;color: white">2</div>
                 </div>
@@ -2543,7 +2543,6 @@
                     </div>
                     <div class="col"></div>
                 </div>
-
             </section>
         </div>
 
