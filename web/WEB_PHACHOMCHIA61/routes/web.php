@@ -36,6 +36,7 @@ Route::group(['middleware' => ['web']], function () {
 });
 
 Route::get('/dashboard','AdminController@dashboard')->name('dashboard');
+Route::get('/getDataProfile','AdminController@getDataProfile')->name('getDataProfile');
 
 Route::group(['middleware' => 'usersession'], function () {
     Route::get('/admin', function (){
