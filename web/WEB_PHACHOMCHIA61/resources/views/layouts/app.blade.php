@@ -24,15 +24,15 @@
     {{--config css--}}
     <style>
         @if (Request::path() == 'login')
-        html,body {
-            width:100%;
-            height:100%;
-            background: url({{ asset('img/bg.jpg')}}) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
+        {{--html,body {--}}
+            {{--width:100%;--}}
+            {{--height:100%;--}}
+            {{--background: url({{ asset('img/bg.jpg')}}) no-repeat center center fixed;--}}
+            {{---webkit-background-size: cover;--}}
+            {{---moz-background-size: cover;--}}
+            {{---o-background-size: cover;--}}
+            {{--background-size: cover;--}}
+        {{--}--}}
         .cover {
             height: 100%;
             width: 100%;
@@ -58,15 +58,15 @@
             display: none;
         }
         @elseif (Request::path() == 'home')
-         html,body {
-            width:100%;
-            height:100%;
-            background: url({{ asset('img/bg.jpg')}}) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
+         {{--html,body {--}}
+            {{--width:100%;--}}
+            {{--height:100%;--}}
+            {{--background: url({{ asset('img/bg.jpg')}}) no-repeat center center fixed;--}}
+            {{---webkit-background-size: cover;--}}
+            {{---moz-background-size: cover;--}}
+            {{---o-background-size: cover;--}}
+            {{--background-size: cover;--}}
+        {{--}--}}
         #background{
             width: 100%;
             height: 100%;

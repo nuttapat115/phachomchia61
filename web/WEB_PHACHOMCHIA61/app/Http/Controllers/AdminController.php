@@ -18,7 +18,7 @@ class AdminController extends Controller
     }
 
     public function dashboard(){
-        return view('adminauth.dashboard.home');
+        return view('adminauth.dashboard.scan');
     }
 
 }
