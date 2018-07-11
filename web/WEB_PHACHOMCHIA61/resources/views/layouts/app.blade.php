@@ -14,6 +14,8 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    {{--sweetalert 2--}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.25.0/sweetalert2.min.js"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
@@ -117,75 +119,11 @@
             display: none;
         }
         @elseif(Request::path() == 'dashboard')
-
-        /*  bhoechie tab */
-        div.bhoechie-tab-container{
-            z-index: 10;
-            background-color: #ffffff;
-            padding: 0 !important;
-            border-radius: 4px;
-            -moz-border-radius: 4px;
-            border:1px solid #ddd;
-            margin-top: 20px;
-            /*margin-left: 50px;*/
-            -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-            box-shadow: 0 6px 12px rgba(0,0,0,.175);
-            -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-            background-clip: padding-box;
-            opacity: 0.97;
-            filter: alpha(opacity=97);
+        .pb-4, .py-4{
+            padding-bottom:0px !important;
         }
-        div.bhoechie-tab-menu{
-            padding-right: 0;
-            padding-left: 0;
-            padding-bottom: 0;
-        }
-        div.bhoechie-tab-menu div.list-group{
-            margin-bottom: 0;
-        }
-        div.bhoechie-tab-menu div.list-group>a{
-            margin-bottom: 0;
-        }
-        div.bhoechie-tab-menu div.list-group>a .glyphicon,
-        div.bhoechie-tab-menu div.list-group>a .fa {
-            color: #5A55A3;
-        }
-        div.bhoechie-tab-menu div.list-group>a:first-child{
-            border-top-right-radius: 0;
-            -moz-border-top-right-radius: 0;
-        }
-        div.bhoechie-tab-menu div.list-group>a:last-child{
-            border-bottom-right-radius: 0;
-            -moz-border-bottom-right-radius: 0;
-        }
-        div.bhoechie-tab-menu div.list-group>a.active,
-        div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
-        div.bhoechie-tab-menu div.list-group>a.active .fa{
-            background-color: #5A55A3;
-            background-image: #5A55A3;
-            color: #ffffff;
-        }
-        div.bhoechie-tab-menu div.list-group>a.active:after{
-            content: '';
-            position: absolute;
-            left: 100%;
-            top: 50%;
-            margin-top: -13px;
-            border-left: 0;
-            border-bottom: 13px solid transparent;
-            border-top: 13px solid transparent;
-            border-left: 10px solid #5A55A3;
-        }
-
-        div.bhoechie-tab-content{
-            background-color: #ffffff;
-            /* border: 1px solid #eeeeee; */
-            padding-left: 20px;
-            padding-top: 10px;
-        }
-
-        div.bhoechie-tab div.bhoechie-tab-content:not(.active){
-            display: none;
+        .pt-4, .py-4{
+            padding-top: 0px !important;
         }
         @endif
 
@@ -260,8 +198,8 @@
     </style>
     {{--config mobile css--}}
     <style>
-        /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
+        /* ----------- iPhone 6+, 7+ and 8+ ----------- */
         /* Portrait and Landscape */
         @media only screen
         and (min-device-width: 414px)

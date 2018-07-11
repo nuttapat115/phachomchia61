@@ -21,7 +21,7 @@ class ProfileDetailScan extends Controller
         }
         // Else, return error 400
         else {
-            return response()->json('error data name', 400);
+            return response()->json('ชื่อ - นามสกุล', 400);
         }
 
     }
@@ -39,22 +39,41 @@ class ProfileDetailScan extends Controller
         }
         // Else, return error 400
         else {
-            return response()->json('error data name', 400);
+            return response()->json('คณะ', 400);
         }
 
     }
 
+    public function checkName(Request $request){
+        $studentID = $request->input('studentID');
+        $allData = DB::select(DB::raw("SELECT studentID FROM profile WHERE studentID = '$studentID'"));
+        if ($allData) {
+            foreach ($allData as $allDatas){
+                $OutAllDatas = $allDatas->studentID;
+            }
+            return response()->json($OutAllDatas, 200);
+        }
+        // Else, return error 400
+        else {
+            return response()->json('ชื่อ - นามสกุล', 400);
+        }
+    }
+
     public function insertDATA(Request $request){
         $studentID = $request->input('studentID');
-        $date = date('Y-m-d');
-        $time = date('H:i:s');
-        DB::table('history')->insert(
-            [
-                'date' => $date,
-                'time' => $time,
-                'studentID' => $studentID,
-                'status' => 'เข้าประชุม',
-            ]
-        );
+        //check data before input
+        $allData = DB::select(DB::raw("SELECT studentID FROM profile WHERE studentID = '$studentID'"));
+        if($allData){
+            $date = date('Y-m-d');
+            $time = date('H:i:s');
+            DB::table('history')->insert(
+                [
+                    'date' => $date,
+                    'time' => $time,
+                    'studentID' => $studentID,
+                    'status' => 'เข้าประชุม',
+                ]
+            );
+        }
     }
 }

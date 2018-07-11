@@ -21,12 +21,10 @@ class AdminController extends Controller
     }
 
     // dataTables
-    public function getDataProfile(){
-
-    }
     public function dashboard(){
         $id = Auth::user()->studentID;
-        $allDetailProfile = DB::select(DB::raw("SELECT p.studentID , p.name , p.department , COUNT(h.studentID) AS COUNTT FROM profile p , history h WHERE p.studentID = '$id' AND p.studentID = h.studentID"));
+//        SELECT p.name , p.studentID , p.department , COUNT(h.studentID) AS COUNTT FROM profile p , history h WHERE p.studentID = h.studentID AND p.studentID LIKE '%610%'GROUP by p.studentID
+        $allDetailProfile = DB::select(DB::raw("SELECT p.name , p.studentID , p.department , COUNT(h.studentID) AS COUNTT FROM profile p , history h WHERE p.studentID = h.studentID GROUP by p.studentID"));
         return view('adminauth.dashboard.index')->with('DetailProfile',$allDetailProfile);
     }
 
