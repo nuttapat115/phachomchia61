@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa7faebb-1b91-4a57-8550-64fc17539cc1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../db/PHACHOMCHIA61.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../db/PHACHOMCHIA61.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/app/Http/Controllers/ProfileDetailScan.php" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/app/Http/Controllers/ProfileDetailScan.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/public/img/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/public/img/bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/resources/views/adminauth/dashboard/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/resources/views/adminauth/dashboard/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_PHACHOMCHIA61/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-    </list>
+    <list default="true" id="fa7faebb-1b91-4a57-8550-64fc17539cc1" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -164,12 +149,12 @@
       <workItem from="1529810394330" duration="246000" />
       <workItem from="1531289800992" duration="1858000" />
       <workItem from="1531300716628" duration="118000" />
-      <workItem from="1531316653421" duration="4004000" />
+      <workItem from="1531316653421" duration="4159000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6226000" />
+    <option name="totallyTimeSpent" value="6381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-32" y="23" width="1472" height="877" extended-state="0" />
