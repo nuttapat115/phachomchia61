@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 11, 2018 at 01:00 PM
+-- Generation Time: Jul 12, 2018 at 07:57 AM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -57,16 +57,9 @@ CREATE TABLE `history` (
   `studentID` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `status` text COLLATE utf8_unicode_ci NOT NULL,
   `date` date NOT NULL,
-  `time` time NOT NULL
+  `time` time NOT NULL,
+  `checkBY` varchar(191) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `history`
---
-
-INSERT INTO `history` (`id`, `studentID`, `status`, `date`, `time`) VALUES
-(1, '61050501002', 'เข้าประชุม', '2018-07-11', '14:02:51'),
-(2, '61050501001', 'เข้าประชุม', '2018-07-11', '14:03:03');
 
 -- --------------------------------------------------------
 
@@ -90,8 +83,8 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`id`, `studentID`, `name`, `password`, `department`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, '61050501001', 'nuttapat chakpech', '$2y$10$VTtSrJ54gxpMXobiYNpKj.YFs6wIBONGYf3bTFwQ5rK3h4ljtCbi6', 'CPE', '1H03g1CIm4NBe1ZR3eefdqKnWSUF36aVPYevFo1yQjeUviAejKfEe99Nu31u', NULL, NULL),
-(2, '61050501002', 'meenkx', '$2y$10$VTtSrJ54gxpMXobiYNpKj.YFs6wIBONGYf3bTFwQ5rK3h4ljtCbi6', 'CPE jaa', 'WLOJrAqeqTb7ZWzysKnmbvCajjgx60SK9vCMs1He7W7VrtNg1Is77t3CxYBs', NULL, NULL);
+(1, '61050501001', 'nuttapat chakpech', '$2y$10$VTtSrJ54gxpMXobiYNpKj.YFs6wIBONGYf3bTFwQ5rK3h4ljtCbi6', 'CPE', 'hSctHNRPhNQGSxI1wRLibl4C0YrIFQaeh7l3qNG1xKaAZv9l7DftDI3YG5TH', NULL, NULL),
+(2, '61050501002', 'meenkx', '$2y$10$VTtSrJ54gxpMXobiYNpKj.YFs6wIBONGYf3bTFwQ5rK3h4ljtCbi6', 'CPE', 'w3guhKyBpdzHQ8VXysJp4JXjqVHcYtPWizXXdGbCIqHCv3lMytlTcjYQztOn', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1513,13 +1506,13 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `history`
 --
 ALTER TABLE `history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `yim`
