@@ -24,8 +24,14 @@ var app = new Vue({
                 document.getElementById('department').innerHTML = response.data;
             })
             .catch(function (error) {
+                swal({
+                  type: 'error',
+                  title: 'ยืนยันตัวตนผิดพลาด',
+                  text: 'ไม่พบผู้ใช้งานในนี้ในฐานข้อมูลของเรา',
+                  footer: '<a href>โปรดติดต่อ สโมสรนักศึกษาคณะวิศวกรรมศาสตร์</a>'
+                });
                 document.getElementById('department').innerHTML = "คณะ";
-                console.log(error);
+                // console.log(error);
             });
 
             // get name
@@ -96,6 +102,12 @@ var app = new Vue({
           document.getElementById('department').innerHTML = response.data;
         })
         .catch(function (error) {
+            swal({
+              type: 'error',
+              title: 'ยืนยันตัวตนผิดพลาด',
+              text: 'ไม่พบผู้ใช้งานในนี้ในฐานข้อมูลของเรา',
+              footer: '<a href>โปรดติดต่อ สโมสรนักศึกษาคณะวิศวกรรมศาสตร์</a>'
+            });
             document.getElementById('department').innerHTML = "คณะ";
             console.log(error);
         });

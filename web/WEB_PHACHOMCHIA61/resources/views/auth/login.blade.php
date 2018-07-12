@@ -44,9 +44,4 @@
     </div>
 </div>
 
-<script>
-    @if ($errors->has('studentID'))
-        console.log({{ $errors->first('studentID') }});
-    @endif
-</script>
 @endsection
