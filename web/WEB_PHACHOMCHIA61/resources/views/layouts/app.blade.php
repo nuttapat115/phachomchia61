@@ -348,7 +348,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item {{ Route::currentRouteName() == "dashboard" ? 'active' : '' }}">
+                                    <a class="nav-link" href="{{ route('dashboard') }}">Scan <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item {{ Route::currentRouteName() == "AddUser" ? 'active' : '' }}">
+                                    <a class="nav-link" href="{{ route('AddUser') }}">Add user profile</a>
+                                </li>
+                            </ul>
+                        </div>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -162,6 +162,7 @@ return [
 
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
     ],
 
     /*
@@ -213,6 +214,14 @@ return [
 
         'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+
+        // other Facades ommited
+        'SEOMeta'   => Artesaos\SEOTools\Facades\SEOMeta::class,
+        'OpenGraph' => Artesaos\SEOTools\Facades\OpenGraph::class,
+        'Twitter'   => Artesaos\SEOTools\Facades\TwitterCard::class,
+        // or
+        'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+
     ],
 
 ];
