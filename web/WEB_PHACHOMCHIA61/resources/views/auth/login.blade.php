@@ -10,7 +10,7 @@
         </div>
 
         <div class="col-md-8">
-                <div class="card-body" style="text-align: center;font-size: 20px;margin: -25px 0px;">
+                <div class="card-body title_font" style="text-align: center;font-size: 20px;margin: -25px 0px;">
                     <span>ตรวจสอบที่นั่งด้วยรหัสนักศึกษา 11 หลัก</span>
                 </div>
                 <div class="card-body" style="text-align: center">

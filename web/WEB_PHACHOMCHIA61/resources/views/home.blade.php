@@ -26,7 +26,7 @@
                                     <nav style="margin: 0px 40px;border-radius: 20px;">
                                         <div class="row">
                                             <div class="col-md">
-                                                <a class = "btn btn-success" style="width: 200px;border-radius: 20px" href="data:image/png;base64, {!! base64_encode(QrCode::format('png')->merge('https://raw.githubusercontent.com/nuttapat115/phachomchia61/master/web/WEB_PHACHOMCHIA61/public/img/qttestlogo2.jpg', .0, true)->errorCorrection('H')->size(500)->generate(Auth::user()->studentID )) !!} " download>Save qr</a>
+                                                <a class = "btn btn-success" style="width: 100%;border-radius: 20px" href="data:image/png;base64, {!! base64_encode(QrCode::format('png')->merge('https://raw.githubusercontent.com/nuttapat115/phachomchia61/master/web/WEB_PHACHOMCHIA61/public/img/qttestlogo2.jpg', .0, true)->errorCorrection('H')->size(500)->generate(Auth::user()->studentID )) !!} " download>Save qr</a>
                                             </div>
                                         </div>
                                     </nav>
@@ -36,13 +36,13 @@
                                         <nav style="margin: 5px 0px">
                                             SIT : <span style="color: red">{{ $sit }}</span>
                                         </nav>
-                                        <nav style="margin: 5px 0px">
+                                        <nav id="nameRes" style="margin: 5px 0px">
                                             NAME : <span style="color: green">{{ Auth::user()->name }}</span>
                                         </nav>
                                         <nav style="margin: 5px 0px">
                                             ID : <span style="color: black;">{{ Auth::user()->studentID }}</span>
                                         </nav>
-                                        <nav style="margin: 5px 0px">
+                                        <nav id="depRes" style="margin: 5px 0px">
                                             DEPARTMENT : Computer engineering
                                         </nav>
                                         <nav style="margin: 10px 0px">
