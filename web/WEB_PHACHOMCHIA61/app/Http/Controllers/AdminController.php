@@ -6,6 +6,7 @@ use App\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -32,4 +33,20 @@ class AdminController extends Controller
         return view('adminauth.dashboard.AddUser');
     }
 
+    public function addUserData(Request $request){
+        $studentID = $request->input('studentID');
+        $names = $request->input('name');
+        $department = $request->input('department');
+        $password = Hash::make('1234567890');
+        DB::table('profile')->insert(
+            [
+                'studentID' => $studentID,
+                'name' => $names,
+                'password' => $password,
+                'department' => $department,
+            ]
+        );
+        toast('เพิ่มข้อมูลเรียบร้อย โปรดเชคที่นั่งของนักศึกษาอีกที','success','top-right');
+        return redirect()->route('AddUser');
+    }
 }

@@ -60,7 +60,6 @@ class ProfileDetailScan extends Controller
     }
 
     public function insertDATA(Request $request){
-        $checkBY = Auth::user()->studentID;
         $studentID = $request->input('studentID');
         //check data before input
         $allData = DB::select(DB::raw("SELECT studentID FROM profile WHERE studentID = '$studentID'"));
@@ -72,8 +71,7 @@ class ProfileDetailScan extends Controller
                     'date' => $date,
                     'time' => $time,
                     'studentID' => $studentID,
-                    'status' => 'เข้าประชุม',
-                    'checkBY' => $checkBY,
+                    'status' => 'เข้าประชุม'
                 ]
             );
         }

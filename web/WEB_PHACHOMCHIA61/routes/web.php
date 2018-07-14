@@ -37,6 +37,7 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::get('/dashboard','AdminController@dashboard')->name('dashboard');
 Route::get('/dashboard/AddUser','AdminController@AddUser')->name('AddUser');
+Route::post('/dashboard/addUserData','AdminController@addUserData')->name('addUserData');
 
 Route::group(['middleware' => 'usersession'], function () {
     Route::get('/admin', function (){
