@@ -48,7 +48,7 @@
                                         <nav style="margin: 10px 0px">
                                             <div class="row">
                                                 <div class="col-md" style="margin: 5px 0px">
-                                                    <button type = "button" class = "btn btn-secondary" style="width: 100%;border-radius: 20px" onclick="window.location.href = '{{ route('stage') }}'">Check Sit</button>
+                                                    <button type = "button" class = "btn btn-secondary" style="width: 100%;border-radius: 20px" onclick="window.location.href = '{{ route('stage') }}'">View your seat</button>
                                                 </div>
                                                 <div class="col-md" style="margin: 5px 0px">
                                                     <button type = "button" class = "btn btn-secondary" style="width: 100%;border-radius: 20px" onclick="window.location.href = '{{ route('history') }}'">History</button>

@@ -112,7 +112,7 @@
                                 <th class="#01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="#01"  ></th>
                                 <th class="*01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="*01"  ></th>
                                 <th class="π01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="π01"  ></th>
-                                <th class="%01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="%01"  ></th>
+                                <th class="%01 chair" data-sit="%01" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="%01"  ></th>
                                 <th class="∆01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="∆01"  ></th>
                                 <th class="Ɵ01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ɵ01"  ></th>
                                 <th class="λ01 chair" scope="col" data-toggle="tooltip" data-placement="top" title="" data-original-title="λ01"  ></th>
@@ -2550,10 +2550,15 @@
             {{--var x = '{{ $sit }}';--}}
             var x = '%01';
             $("."+x).css("backgroundColor", "#20c997");
+            // $(".%01").css("backgroundColor", "#20c997");
             console.log("ที่นั่ง - " + x);
-
 
             //tooltip
             $('[data-toggle="tooltip"]').tooltip();
+        </script>
+        <script>
+            var y = "0";
+            var x = document.querySelectorAll(".chair");
+            x[y].style.backgroundColor = "#20c997";
         </script>
 @endsection
