@@ -2547,9 +2547,11 @@
         </div>
 
         <script>
-            var x = '{{ $sit }}';
+            {{--var x = '{{ $sit }}';--}}
+            var x = '%01';
             $("."+x).css("backgroundColor", "#20c997");
-            console.log(x);
+            console.log("ที่นั่ง - " + x);
+
 
             //tooltip
             $('[data-toggle="tooltip"]').tooltip();
