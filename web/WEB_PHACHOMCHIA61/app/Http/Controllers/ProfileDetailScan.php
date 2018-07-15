@@ -62,18 +62,26 @@ class ProfileDetailScan extends Controller
     public function insertDATA(Request $request){
         $studentID = $request->input('studentID');
         //check data before input
-        $allData = DB::select(DB::raw("SELECT studentID FROM profile WHERE studentID = '$studentID'"));
-        if($allData){
-            $date = date('Y-m-d');
-            $time = date('H:i:s');
-            DB::table('history')->insert(
-                [
-                    'date' => $date,
-                    'time' => $time,
-                    'studentID' => $studentID,
-                    'status' => 'เข้าประชุม'
-                ]
-            );
+        $allDataHistory = DB::select(DB::raw("SELECT studentID FROM history WHERE studentID = '$studentID'"));
+        if ($allDataHistory) {
+            return response()->json('คุณได้ทำการแสกน ซ้ำ!!', 200);
+        }
+        // Else, return เพิ่มข้อมูลเสร็จ
+        else {
+            $allData = DB::select(DB::raw("SELECT studentID FROM profile WHERE studentID = '$studentID'"));
+            if($allData){
+                $date = date('Y-m-d');
+                $time = date('H:i:s');
+                DB::table('history')->insert(
+                    [
+                        'date' => $date,
+                        'time' => $time,
+                        'studentID' => $studentID,
+                        'status' => 'เข้าประชุม'
+                    ]
+                );
+            }
+            return response()->json('เพิ่มข้อมูลเสร็จสิ้น', 400);
         }
     }
 }

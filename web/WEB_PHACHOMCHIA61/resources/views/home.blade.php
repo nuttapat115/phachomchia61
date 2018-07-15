@@ -43,7 +43,7 @@
                                             ID : <span style="color: black;">{{ Auth::user()->studentID }}</span>
                                         </nav>
                                         <nav id="depRes" style="margin: 5px 0px">
-                                            DEPARTMENT : Computer engineering
+                                            DEPARTMENT : {{ Auth::user()->department }}
                                         </nav>
                                         <nav style="margin: 10px 0px">
                                             <div class="row">
