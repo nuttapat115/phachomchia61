@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
@@ -74,18 +75,27 @@ class AuthController extends Controller
 
         // Attempt to log the user in
         if (Auth::guard('admin')->attempt(['studentID' => $request->studentID, 'password' => $request->password], $request->remember)) {
+            DB::table('admins')
+                ->where('studentID', $request->studentID)
+                ->update(['LoginStatus' => '1']);
             // if successful, then redirect to their intended location
             Session::put('authen_type', 'admin');
+            Session::put('authen_id', $request->studentID);
             return redirect()->intended(route('dashboard'));
         }
-            // if unsuccessful, then redirect back to the login with the form data
+        // if unsuccessful, then redirect back to the login with the form data
         return redirect()->back()->withInput($request->only('studentID', 'remember'));
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
+        $id = $request->session()->get('authen_id');
+        DB::table('admins')
+            ->where('studentID', $id)
+            ->update(['LoginStatus' => '0']);
         Auth::guard('admin')->logout();
         Session::forget('authen_type');
+        Session::forget('authen_id');
         return redirect('/admin');
     }
 

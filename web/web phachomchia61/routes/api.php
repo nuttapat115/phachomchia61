@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Stevebauman\Location\Facades\Location;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,4 @@ Route::post('/insertDATA','ProfileDetailScan@insertDATA')->name('insertDATA');
 Route::post('/checkName','ProfileDetailScan@checkName')->name('checkName');
 
 Route::get('/test',function (){ echo "test api link";});
+Route::get('/ip',function (Request $request){ dd(Request::getClientIp()); });

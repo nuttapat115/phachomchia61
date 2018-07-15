@@ -163,6 +163,8 @@ return [
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        Stevebauman\Location\LocationServiceProvider::class,
+
     ],
 
     /*
@@ -221,6 +223,7 @@ return [
         'Twitter'   => Artesaos\SEOTools\Facades\TwitterCard::class,
         // or
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+        'Location' => Stevebauman\Location\Facades\Location::class,
 
     ],
 
