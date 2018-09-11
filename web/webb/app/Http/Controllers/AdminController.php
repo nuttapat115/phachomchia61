@@ -57,7 +57,7 @@ class AdminController extends Controller
         return redirect()->route('AddUser');
     }
 
-    public function scan(){
-        return
-    }
+//    public function scan(){
+//        return
+//    }
 }
